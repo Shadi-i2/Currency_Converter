@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #675afe;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 10px;
+}
+
+.wrapper .container {
+  width: 370px;
+  padding: 30px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  background-color: #fff;
+}
+
+.wrapper .container > div {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wrapper .container form {
+  margin: 40px 0 20px 0;
+}
+
+.wrapper .container form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.wrapper .container form p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.wrapper .container form input {
+  border: 1px solid #999;
+  padding: 15px;
+  font-size: 17px;
+  caret-color: #675afe;
+}
+
+.wrapper .container form input:focus {
+  border: 2px solid #675afe;
+}
+
+.wrapper .container form .drop-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+form .drop-list .select-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  padding: 10px 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.select-box select {
+  width: auto;
+  font-size: 15px;
+  font-weight: 600;
+  background: none;
+  margin: 0 -5px 0 5px;
+}
+
+.select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-right: 2px solid #fff;
+}
+
+.select-box select option {
+  font-size: 15px;
+}
+
+.select-box img {
+  max-width: 21px;
+}
+
+.wrapper .container form .drop-list .icon {
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 0 5px;
+}
+
+.wrapper .container form .exchange-rate {
+  font-size: 17px;
+  margin: 20px 0 20px;
+  text-align: center;
+}
+
+.wrapper .container form button {
+  padding: 12px;
+  background-color: #675afe;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.PopUp {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  width: 450px;
+  height: auto;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.PopUp .header_PopUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.PopUp .header_PopUp h2 {
+  color: red;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 28px;
+}
+
+.PopUp i {
+  color: white;
+  width: 35px;
+  height: 35px;
+  background-color: red;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.PopUp .content_PopUp {
+  text-align: center;
+  padding: 5px 2px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.PopUp form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 5px;
+}
+.PopUp form input {
+  margin: 0 10px;
+  width: 70%;
+  border: none;
+  padding: 11px;
+  background-color: #55555524;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 16px;
+}
+.PopUp form button {
+  border: none;
+  color: white;
+  background-color: red;
+  height: 39px;
+  width: 50px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.remove-PopUp {
+  display: none;
+}
+.Not-click {
+  pointer-events: none;
+}
+@media (max-width: 460px) {
+  .PopUp {
+    width: 365px;
+  }
+}
+@media (max-width: 380px) {
+  .wrapper .container > div {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .wrapper .container form {
+    margin: 20px 0 20px 0;
+  }
+  .PopUp {
+    width: 335px;
+  }
+}
+
+@media (max-width: 345px) {
+  form .drop-list .select-box {
+    padding: 10px 10px;
+  }
+  .PopUp {
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 310px) {
+  form .drop-list .select-box {
+    padding: 10px 6px;
+  }
+  .select-box select {
+    font-size: 12px;
+  }
+  .wrapper .container form .drop-list .icon {
+    padding: 0 8px;
+  }
+  .wrapper .container > div {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  .PopUp {
+    width: 250px;
+    height: 275px;
+  }
+}
